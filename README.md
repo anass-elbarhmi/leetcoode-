@@ -1,1 +1,3 @@
 # leetcoode-
+
+solving some of these...
