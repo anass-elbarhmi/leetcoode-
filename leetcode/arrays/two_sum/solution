@@ -1,1 +1,27 @@
 
+
+int *twoSum(int *nums, int numsSize, int target, int *returnSize)
+{
+    *returnSize = 2;
+    int i, j, sum;
+    int *indices = (int *)malloc(sizeof(int) * (*returnSize));
+    for (i = 0; i < numsSize; i++)
+    {
+        for (j = 0; j < numsSize; j++)
+        {
+            if (j == i)
+            {
+                continue;
+            }
+            sum = nums[i] + nums[j];
+            if (sum == target)
+            {
+
+                indices[0] = i;
+                indices[1] = j;
+                return indices;
+            }
+        }
+    }
+    return NULL;
+}
